@@ -1,0 +1,77 @@
+/* Center the game grid */
+#game {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 5px;
+    margin: 0 auto; /* Center horizontally */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center vertically */
+  }
+  
+  /* Rest of your styles remain the same */
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+  }
+  
+  h1 {
+    color: #333;
+    margin-top: 20px;
+  }
+  
+  /* Default cell styles */
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 5px;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Colors for X and O */
+  .cell.x {
+    background-color: blue; /* Blue for X */
+    color: white; /* White text for contrast */
+  }
+  
+  .cell.o {
+    background-color: red; /* Red for O */
+    color: white; /* White text for contrast */
+  }
+  
+  
+  .cell.taken {
+    cursor: not-allowed;
+  }
+  
+  #message {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: rgb(43, 198, 209);
+  }
+  
+  #reset {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 85%; /* Adjust as necessary */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  #reset:hover {
+    background-color: #555;
+  }
+  
